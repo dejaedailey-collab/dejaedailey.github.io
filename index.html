@@ -1,69 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dejae Dailey | IT Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        h1 { color: #38bdf8; }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dejae Dailey | IT & Cybersecurity Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to right, #0f172a, #020617);
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 { color: #38bdf8; font-size: 40px; }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      margin: 25px 0;
+      border-radius: 12px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    p { color: #cbd5f5; }
+  </style>
 </head>
 
 <body>
+
 <div class="container">
-    <h1>Dejae Dailey</h1>
-    <h2>IT Support | Cybersecurity Professional</h2>
 
-    <p>Hands-on experience with networking, troubleshooting, and security labs using Cisco Packet Tracer.</p>
-<div class="card">
-    <h3>Lab 1: Basic LAN Setup & Troubleshooting</h3>
+  <h1>Dejae Dailey</h1>
+  <h2>IT Support | Cybersecurity Professional</h2>
 
-    <p>Built and configured a small LAN in Cisco Packet Tracer using a router, switch, and two end devices. Validated host addressing, default gateway configuration, and end-to-end connectivity through command-line testing.</p>
+  <p>
+    Hands-on experience with networking, troubleshooting, and security labs using Cisco Packet Tracer.
+  </p>
+
+  <!-- Resume Button -->
+  <a class="btn" href="Dejae_Dailey_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+
+  <!-- Email -->
+  <p><b>Email:</b> dejaedailey@gmail.com</p>
+
+  <!-- LAB 1 -->
+  <div class="card">
+    <h3>Lab 1: LAN Configuration and Connectivity Troubleshooting</h3>
+
+    <p>Configured and validated a LAN using static IP addressing and router interface configuration.</p>
 
     <p><b>Skills:</b> IP Addressing, Troubleshooting, Cisco CLI</p>
 
     <h4>Network Topology</h4>
-    <img src="topology.png" width="100%" style="border-radius:10px; margin-bottom:10px;">
-    <p><i>Figure 1. Packet Tracer topology showing two hosts connected through a Layer 2 switch to a Cisco 2911 router. This lab was used to practice basic interface configuration, static host addressing, and LAN connectivity validation.</i></p>
+    <img src="topology.png">
+    <p><i>Figure 1. LAN topology with PCs, switch, and router.</i></p>
 
-    <h4>Connectivity Validation</h4>
-    <img src="ping.png" width="100%" style="border-radius:10px; margin-bottom:10px;">
-    <p><i>Figure 2. ICMP testing from PC0 used to verify reachability within the local network. Initial packet loss helped isolate the issue to host-side addressing, and successful gateway communication confirmed proper router interface configuration.</i></p>
+    <h4>Connectivity Test</h4>
+    <img src="ping.png">
+    <p><i>Figure 2. Successful ping verifying connectivity.</i></p>
 
-<div class="card">
+    <h4>Router Configuration</h4>
+    <img src="router.png">
+    <p><i>Figure 3. Router interface configured and enabled.</i></p>
+  </div>
+
+  <!-- LAB 2 -->
+  <div class="card">
     <h3>Lab 2: DHCP Configuration</h3>
 
-    <p>Configured a DHCP server on a Cisco router to dynamically assign IP addresses to client devices.</p>
+    <p>Configured a DHCP server on a Cisco router to automatically assign IP addresses.</p>
 
     <p><b>Skills:</b> DHCP, Network Configuration, Cisco CLI</p>
 
     <h4>DHCP Configuration</h4>
-    <img src="dhcp.png" width="100%" style="border-radius:10px;">
-    <p><i>Figure 4. DHCP pool configuration on a Cisco router, defining network range, default gateway, and DNS server to enable automatic IP address assignment for client devices.</i></p>
+    <img src="dhcp.png">
+    <p><i>Figure 4. DHCP pool configured on router.</i></p>
 
-    <h4>IP Assignment Verification</h4>
-    <img src="ipconfig.png" width="100%" style="border-radius:10px;">
-    <p><i>Figure 5. Client device receiving an IP address dynamically from the DHCP server, confirming successful configuration and network connectivity.</i></p>
-</div>   
+    <h4>IP Assignment</h4>
+    <img src="ipconfig.png">
+    <p><i>Figure 5. Device receiving IP from DHCP server.</i></p>
+  </div>
+
+  <!-- FOOTER -->
+  <p style="margin-top:40px;">© 2026 Dejae Dailey</p>
 
 </div>
 
-    </div>
-</div>
 </body>
+</html>
 </html>
