@@ -615,14 +615,6 @@
               <p><i>Figure 2. ICMP test results confirming end-to-end communication after troubleshooting and host configuration correction.</i></p>
             </div>
 
-            <div class="image-box">
-              <h4>Router Interface Configuration</h4>
-              <img src="router.png" alt="Router CLI configuration">
-              <p><i>Figure 3. Router interface configuration showing IPv4 addressing and activation of the LAN interface.</i></p>
-            </div>
-          </div>
-        </article>
-
         <article class="lab-card">
           <div class="lab-head">
             <h3>Investigation 02: DHCP Service Configuration</h3>
@@ -644,13 +636,13 @@
             <div class="image-box">
               <h4>DHCP Scope Configuration</h4>
               <img src="dhcp.png" alt="DHCP scope configuration">
-              <p><i>Figure 4. DHCP configuration defining the address pool, reserved range, gateway, and DNS server settings.</i></p>
+              <p><i>Figure 3. DHCP configuration defining the address pool, reserved range, gateway, and DNS server settings.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Client Address Validation</h4>
               <img src="ipconfig.png" alt="Client ipconfig output">
-              <p><i>Figure 5. Client endpoint output confirming successful receipt of dynamic IPv4 settings from the DHCP service.</i></p>
+              <p><i>Figure 4. Client endpoint output confirming successful receipt of dynamic IPv4 settings from the DHCP service.</i></p>
             </div>
           </div>
         </article>
@@ -676,19 +668,19 @@
             <div class="image-box">
               <h4>ACL Topology</h4>
               <img src="acl-topology.png" alt="ACL topology">
-              <p><i>Figure 6. Segmented topology with two routed networks used to validate ACL-based traffic restriction.</i></p>
+              <p><i>Figure 5. Segmented topology with two routed networks used to validate ACL-based traffic restriction.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Interface Verification</h4>
               <img src="acl-interfaces.png" alt="ACL interface verification">
-              <p><i>Figure 7. Router interface verification confirming that both routed networks were operational before ACL validation testing.</i></p>
+              <p><i>Figure 6. Router interface verification confirming that both routed networks were operational before ACL validation testing.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Blocked Traffic Evidence</h4>
               <img src="acl-ping.png" alt="Blocked ACL traffic">
-              <p><i>Figure 8. Failed ICMP communication from a restricted host confirming that traffic was not successfully forwarded to the protected network due to ACL enforcement.</i></p>
+              <p><i>Figure 7. Failed ICMP communication from a restricted host confirming that traffic was not successfully forwarded to the protected network due to ACL enforcement.</i></p>
             </div>
           </div>
         </article>
@@ -714,25 +706,19 @@
             <div class="image-box">
               <h4>Network Topology</h4>
               <img src="fw-topology.png" alt="Firewall topology">
-              <p><i>Figure 9. Segmented network topology demonstrating a client network and protected server environment connected through a Cisco router configured with extended ACLs.</i></p>
+              <p><i>Figure 8. Segmented network topology demonstrating a client network and protected server environment connected through a Cisco router configured with extended ACLs.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Extended ACL Configuration</h4>
               <img src="fw-acl-config.png" alt="Firewall ACL config">
-              <p><i>Figure 10. Extended ACL configuration applied on the router to block HTTP traffic on port 80 from the source network while permitting all other traffic.</i></p>
-            </div>
-
-            <div class="image-box">
-              <h4>ICMP Connectivity (Allowed)</h4>
-              <img src="fw-ping.png" alt="Firewall ping allowed">
-              <p><i>Figure 11. Successful ICMP communication confirming that network connectivity remained functional despite HTTP traffic restrictions.</i></p>
+              <p><i>Figure 9. Extended ACL configuration applied on the router to block HTTP traffic on port 80 from the source network while permitting all other traffic.</i></p>
             </div>
 
             <div class="image-box">
               <h4>HTTP Traffic Blocked</h4>
               <img src="fw-http-blocked.png" alt="HTTP blocked">
-              <p><i>Figure 12. Web browser request timing out due to ACL rules blocking HTTP traffic, confirming successful firewall-like behavior.</i></p>
+              <p><i>Figure 10. Web browser request timing out due to ACL rules blocking HTTP traffic, confirming successful firewall-like behavior.</i></p>
             </div>
           </div>
         </article>
@@ -758,19 +744,19 @@
             <div class="image-box">
               <h4>Normal Traffic</h4>
               <img src="ids-normal-traffic.png" alt="Normal traffic">
-              <p><i>Figure 13. Legitimate HTTP communication between client and server used to establish baseline behavior.</i></p>
+              <p><i>Figure 11. Legitimate HTTP communication between client and server used to establish baseline behavior.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Suspicious Activity</h4>
               <img src="ids-suspicious-traffic.png" alt="Suspicious ICMP activity">
-              <p><i>Figure 14. Repeated ICMP requests from a single source host indicating potential reconnaissance activity.</i></p>
+              <p><i>Figure 12. Repeated ICMP requests from a single source host indicating potential reconnaissance activity.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Packet Flow Analysis</h4>
               <img src="ids-packet-flow.png" alt="Packet flow analysis">
-              <p><i>Figure 15. Simulation mode event list displaying both HTTP and ICMP traffic, enabling comparison of normal user behavior and suspicious repeated requests.</i></p>
+              <p><i>Figure 13. Simulation mode event list displaying both HTTP and ICMP traffic, enabling comparison of normal user behavior and suspicious repeated requests.</i></p>
             </div>
           </div>
         </article>
