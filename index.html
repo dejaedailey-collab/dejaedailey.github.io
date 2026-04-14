@@ -646,6 +646,49 @@
               <h4>Blocked Traffic Evidence</h4>
               <img src="acl-ping.png" alt="Blocked ping output">
               <p><i>Figure 8. Failed ICMP communication from a restricted host confirming that traffic was not successfully forwarded to the protected network.</i></p>
+<div class="lab-card">
+  <div class="lab-head">
+    <h3>Investigation 04: Firewall Traffic Filtering & Access Control</h3>
+    <span class="badge badge-success">Threat Contained</span>
+  </div>
+
+  <p>
+    Designed and implemented a segmented network environment to simulate firewall behavior using extended Access Control Lists (ACLs).
+    Configured traffic filtering rules to block HTTP access to a protected server while maintaining ICMP connectivity. 
+    Conducted validation testing to confirm enforcement of security controls and proper network functionality.
+  </p>
+
+  <div class="tag-row">
+    <span class="tag">Firewall Configuration</span>
+    <span class="tag">Extended ACL</span>
+    <span class="tag">Traffic Filtering</span>
+    <span class="tag">Network Segmentation</span>
+  </div>
+
+  <div class="lab-images">
+
+    <div class="image-box">
+      <h4>Network Topology</h4>
+      <img src="fw-topology.png">
+      <p><i>Segmented network with controlled access between client and server zones.</i></p>
+    </div>
+
+    <div class="image-box">
+      <h4>ACL Configuration</h4>
+      <img src="fw-acl-config.png">
+      <p><i>Extended ACL applied to restrict HTTP traffic while allowing all other protocols.</i></p>
+    </div>
+
+    <div class="image-box">
+      <h4>Blocked Web Traffic</h4>
+      <img src="fw-http-blocked.png">
+      <p><i>HTTP request failure demonstrates enforced security control.</i></p>
+    </div>
+
+    </div>
+
+  </div>
+</div>
             </div>
           </div>
         </article>
