@@ -6,18 +6,19 @@
   <title>Dejae Dailey | SOC Analyst Portfolio</title>
   <style>
     :root {
-      --bg: #050816;
-      --bg2: #0b1023;
-      --panel: rgba(14, 20, 38, 0.92);
-      --panel-2: rgba(18, 27, 50, 0.9);
-      --border: rgba(67, 97, 238, 0.22);
-      --text: #e6eefc;
-      --muted: #94a3b8;
-      --accent: #00e5ff;
-      --accent-2: #4ade80;
-      --danger: #f87171;
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      --bg: #06101f;
+      --bg2: #0c172b;
+      --panel: rgba(13, 23, 42, 0.88);
+      --panel-2: rgba(17, 29, 53, 0.92);
+      --border: rgba(79, 195, 247, 0.18);
+      --text: #eaf2ff;
+      --muted: #9fb0cc;
+      --accent: #4fc3f7;
+      --accent-2: #22c55e;
+      --warning: #facc15;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
       --radius: 18px;
+      --radius-sm: 12px;
     }
 
     * {
@@ -33,25 +34,25 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(0, 229, 255, 0.10), transparent 24%),
-        radial-gradient(circle at top right, rgba(74, 222, 128, 0.08), transparent 20%),
+        radial-gradient(circle at top left, rgba(79, 195, 247, 0.10), transparent 26%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.08), transparent 18%),
         linear-gradient(135deg, var(--bg), var(--bg2));
     }
 
     .grid-overlay {
       position: fixed;
       inset: 0;
+      pointer-events: none;
+      opacity: 0.15;
       background-image:
         linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 38px 38px;
-      pointer-events: none;
-      opacity: 0.18;
+      background-size: 36px 36px;
       z-index: 0;
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(1150px, 92%);
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -60,22 +61,22 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(5, 8, 22, 0.82);
+      z-index: 1000;
+      background: rgba(6, 16, 31, 0.82);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 16px 0;
     }
 
     .brand {
       font-weight: 700;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
       font-size: 1.05rem;
     }
 
@@ -86,8 +87,9 @@
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 22px;
       font-size: 0.95rem;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
@@ -95,12 +97,12 @@
     }
 
     .hero {
-      padding: 88px 0 48px;
+      padding: 90px 0 50px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
+      grid-template-columns: 1.25fr 0.85fr;
       gap: 24px;
       align-items: center;
     }
@@ -111,8 +113,8 @@
       gap: 10px;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(0, 229, 255, 0.08);
-      border: 1px solid rgba(0, 229, 255, 0.2);
+      border: 1px solid rgba(79, 195, 247, 0.24);
+      background: rgba(79, 195, 247, 0.08);
       color: var(--accent);
       font-weight: 700;
       font-size: 0.9rem;
@@ -122,15 +124,16 @@
     .dot {
       width: 10px;
       height: 10px;
-      background: var(--accent-2);
       border-radius: 50%;
+      background: var(--accent-2);
       box-shadow: 0 0 12px var(--accent-2);
     }
 
     h1 {
-      font-size: clamp(2.3rem, 5vw, 4.3rem);
-      line-height: 1.08;
       margin: 0 0 14px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
     }
 
     .accent {
@@ -138,11 +141,11 @@
     }
 
     .hero p {
+      margin: 0 0 26px;
       color: var(--muted);
       font-size: 1.04rem;
-      max-width: 720px;
-      margin: 0 0 28px;
-      line-height: 1.7;
+      line-height: 1.75;
+      max-width: 760px;
     }
 
     .button-row {
@@ -158,7 +161,7 @@
       padding: 13px 20px;
       border-radius: 12px;
       font-weight: 700;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     .btn:hover {
@@ -167,8 +170,8 @@
 
     .btn-primary {
       background: var(--accent);
-      color: #041019;
-      box-shadow: 0 10px 24px rgba(0, 229, 255, 0.22);
+      color: #04131e;
+      box-shadow: 0 10px 25px rgba(79, 195, 247, 0.24);
     }
 
     .btn-secondary {
@@ -185,9 +188,9 @@
 
     .metric,
     .panel,
+    .skill-card,
     .lab-card,
-    .contact-card,
-    .skill-card {
+    .contact-card {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -195,13 +198,14 @@
     }
 
     .metric {
-      padding: 16px;
+      padding: 18px;
     }
 
     .metric strong {
       display: block;
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       color: white;
+      margin-bottom: 4px;
     }
 
     .metric span {
@@ -214,14 +218,14 @@
     }
 
     .panel h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 12px;
+      font-size: 1.1rem;
     }
 
     .panel p,
     .panel li {
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .panel ul {
@@ -230,7 +234,7 @@
     }
 
     section {
-      padding: 26px 0 34px;
+      padding: 28px 0 36px;
     }
 
     .section-heading {
@@ -242,7 +246,7 @@
 
     .section-heading::before {
       content: "";
-      width: 18px;
+      width: 20px;
       height: 3px;
       border-radius: 999px;
       background: var(--accent);
@@ -250,15 +254,15 @@
     }
 
     .section-title {
-      font-size: 1.95rem;
       margin: 0;
+      font-size: 2rem;
     }
 
     .section-subtitle {
       margin: 0 0 22px;
       color: var(--muted);
-      max-width: 760px;
-      line-height: 1.7;
+      max-width: 780px;
+      line-height: 1.75;
     }
 
     .skills-grid {
@@ -270,12 +274,18 @@
     .skill-card {
       padding: 20px;
       background: var(--panel-2);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(79, 195, 247, 0.32);
     }
 
     .skill-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 1rem;
+      color: white;
     }
 
     .skill-card p {
@@ -287,12 +297,18 @@
 
     .labs-grid {
       display: grid;
-      gap: 22px;
+      gap: 24px;
     }
 
     .lab-card {
-      padding: 26px;
+      padding: 28px;
       background: var(--panel-2);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .lab-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(79, 195, 247, 0.28);
     }
 
     .lab-head {
@@ -301,12 +317,13 @@
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .lab-head h3 {
       margin: 0;
-      font-size: 1.3rem;
+      font-size: 1.32rem;
+      line-height: 1.35;
     }
 
     .badge {
@@ -318,14 +335,20 @@
     }
 
     .badge-success {
-      background: rgba(74, 222, 128, 0.1);
-      border: 1px solid rgba(74, 222, 128, 0.24);
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.24);
       color: #b7f7c9;
+    }
+
+    .badge-warning {
+      background: rgba(250, 204, 21, 0.14);
+      border: 1px solid rgba(250, 204, 21, 0.22);
+      color: #fde68a;
     }
 
     .lab-card p {
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .tag-row {
@@ -338,10 +361,10 @@
     .tag {
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(0, 229, 255, 0.08);
-      border: 1px solid rgba(0, 229, 255, 0.14);
-      color: #d8fbff;
-      font-size: 0.85rem;
+      background: rgba(79, 195, 247, 0.08);
+      border: 1px solid rgba(79, 195, 247, 0.14);
+      color: #dcf6ff;
+      font-size: 0.84rem;
     }
 
     .lab-images {
@@ -364,18 +387,26 @@
 
     .image-box img {
       width: 100%;
-      border-radius: 12px;
       display: block;
+      border-radius: 12px;
       margin-bottom: 10px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.01);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
     }
 
     .image-box p {
       margin: 0;
       font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.7;
     }
 
     .contact-card {
-      padding: 28px;
+      padding: 30px;
       text-align: center;
     }
 
@@ -383,7 +414,7 @@
       color: var(--muted);
       max-width: 760px;
       margin: 0 auto 18px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .contact-links {
@@ -401,16 +432,21 @@
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
       font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      transform: translateY(-2px);
     }
 
     footer {
-      padding: 28px 0 46px;
+      padding: 30px 0 48px;
       text-align: center;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       .hero-grid,
       .skills-grid,
       .metrics {
@@ -430,6 +466,14 @@
 
       .hero {
         padding-top: 60px;
+      }
+
+      .lab-card,
+      .panel,
+      .skill-card,
+      .contact-card,
+      .metric {
+        padding: 18px;
       }
     }
   </style>
@@ -457,12 +501,10 @@
           SOC Analyst Portfolio
         </div>
 
-        <h1>Documenting <span class="accent">security-focused lab work</span> through hands-on network analysis and control validation.</h1>
+        <h1>Building <span class="accent">hands-on cybersecurity experience</span> through security-focused network investigations.</h1>
 
         <p>
-          I am building practical cybersecurity experience through labs focused on network visibility,
-          access control, routing, and traffic validation. This portfolio highlights how I configure,
-          troubleshoot, and verify security controls in simulated environments using Cisco Packet Tracer.
+          I am building practical experience in network security, access control, firewall filtering, traffic analysis, and intrusion detection through hands-on Cisco Packet Tracer labs. This portfolio shows how I configure, validate, troubleshoot, and document security controls in simulated environments aligned to entry-level SOC and cybersecurity analyst roles.
         </p>
 
         <div class="button-row">
@@ -473,16 +515,16 @@
 
         <div class="metrics">
           <div class="metric">
-            <strong>3</strong>
-            <span>Completed labs</span>
+            <strong>5</strong>
+            <span>Completed investigations</span>
           </div>
           <div class="metric">
-            <strong>Routing + Security</strong>
-            <span>Core focus area</span>
+            <strong>SOC-Focused</strong>
+            <span>Security lab portfolio</span>
           </div>
           <div class="metric">
-            <strong>Cisco CLI</strong>
-            <span>Primary lab workflow</span>
+            <strong>Packet Tracer</strong>
+            <span>Primary analysis environment</span>
           </div>
         </div>
       </div>
@@ -490,10 +532,10 @@
       <div class="panel">
         <h3>Current Analyst Focus</h3>
         <ul>
-          <li>Validating network communication paths across segmented environments</li>
-          <li>Implementing and testing access control mechanisms on Cisco routers</li>
-          <li>Documenting failed and successful connectivity to prove control effectiveness</li>
-          <li>Building a portfolio aligned to entry-level SOC and cybersecurity analyst roles</li>
+          <li>Traffic analysis and identification of suspicious network behavior</li>
+          <li>Router ACL implementation for access control and firewall simulation</li>
+          <li>Validation of routing, DHCP, segmentation, and protocol-specific filtering</li>
+          <li>Documenting investigation workflows to support entry-level SOC applications</li>
         </ul>
       </div>
     </div>
@@ -505,25 +547,28 @@
         <h2 class="section-title">Security Capabilities</h2>
       </div>
       <p class="section-subtitle">
-        These are the technical areas currently being developed and validated through practical lab work.
+        Technical skills currently being developed and validated through hands-on network security labs.
       </p>
 
       <div class="skills-grid">
         <div class="skill-card">
           <h3>Traffic Analysis</h3>
-          <p>Packet flow validation, ICMP testing, interface verification, and connectivity troubleshooting across network boundaries.</p>
+          <p>Packet flow monitoring, ICMP and HTTP review, event visibility, and identification of baseline versus suspicious network behavior.</p>
         </div>
+
         <div class="skill-card">
           <h3>Access Control</h3>
-          <p>Router ACL configuration, policy enforcement, host-based traffic restriction, and verification of blocked communication paths.</p>
+          <p>Standard and extended ACL implementation, host-based restrictions, protocol-specific filtering, and security validation testing.</p>
         </div>
+
         <div class="skill-card">
           <h3>Network Services</h3>
-          <p>Static addressing, DHCP configuration, gateway assignment, and validation of dynamically assigned endpoint settings.</p>
+          <p>Static addressing, DHCP configuration, gateway assignment, routing validation, and endpoint verification in segmented environments.</p>
         </div>
+
         <div class="skill-card">
           <h3>Incident Mindset</h3>
-          <p>Structured troubleshooting across OSI layers to isolate physical, switching, routing, and endpoint configuration issues.</p>
+          <p>Structured troubleshooting across physical, switching, routing, and security layers to isolate faults and restore intended functionality.</p>
         </div>
       </div>
     </div>
@@ -535,10 +580,11 @@
         <h2 class="section-title">Lab Investigations</h2>
       </div>
       <p class="section-subtitle">
-        Each lab below documents configuration activity, validation steps, and evidence used to confirm the intended network or security outcome.
+        Each investigation below documents the objective, security or network control being tested, and the evidence used to validate the final outcome.
       </p>
 
       <div class="labs-grid">
+
         <article class="lab-card">
           <div class="lab-head">
             <h3>Investigation 01: LAN Configuration and Connectivity Troubleshooting</h3>
@@ -546,8 +592,7 @@
           </div>
 
           <p>
-            Built a basic routed LAN environment and validated endpoint communication through static IPv4 addressing,
-            interface activation, and ICMP testing. Troubleshooting focused on isolating host misconfiguration and restoring connectivity.
+            Built a routed LAN environment and validated endpoint communication using static IPv4 addressing, router interface activation, and ICMP testing. Troubleshooting focused on isolating host configuration issues and restoring connectivity.
           </p>
 
           <div class="tag-row">
@@ -566,14 +611,14 @@
 
             <div class="image-box">
               <h4>Connectivity Validation</h4>
-              <img src="ping.png" alt="Ping test">
-              <p><i>Figure 2. ICMP test results used to verify end-to-end reachability and confirm successful troubleshooting.</i></p>
+              <img src="ping.png" alt="Ping validation">
+              <p><i>Figure 2. ICMP test results confirming end-to-end communication after troubleshooting and host configuration correction.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Router Interface Configuration</h4>
-              <img src="router.png" alt="Router CLI output">
-              <p><i>Figure 3. Router interface configuration showing IPv4 addressing and activation of the primary LAN interface.</i></p>
+              <img src="router.png" alt="Router CLI configuration">
+              <p><i>Figure 3. Router interface configuration showing IPv4 addressing and activation of the LAN interface.</i></p>
             </div>
           </div>
         </article>
@@ -585,8 +630,7 @@
           </div>
 
           <p>
-            Configured a Cisco router to provide DHCP services for client systems, including scope definition,
-            reserved addresses, default gateway assignment, and DNS settings. Validation confirmed dynamic endpoint configuration.
+            Configured a Cisco router to provide DHCP services for client systems, including address exclusion, scope definition, default gateway assignment, and DNS settings. Validation confirmed successful dynamic endpoint configuration.
           </p>
 
           <div class="tag-row">
@@ -599,8 +643,8 @@
           <div class="lab-images">
             <div class="image-box">
               <h4>DHCP Scope Configuration</h4>
-              <img src="dhcp.png" alt="DHCP router config">
-              <p><i>Figure 4. DHCP configuration defining the network range, reserved addresses, gateway, and DNS server settings.</i></p>
+              <img src="dhcp.png" alt="DHCP scope configuration">
+              <p><i>Figure 4. DHCP configuration defining the address pool, reserved range, gateway, and DNS server settings.</i></p>
             </div>
 
             <div class="image-box">
@@ -618,8 +662,7 @@
           </div>
 
           <p>
-            Built a two-network routed environment and implemented a standard ACL to restrict communication from a defined source host.
-            Validation required troubleshooting cabling, interface state, routing paths, and endpoint addressing before confirming control enforcement.
+            Built a two-network routed environment and implemented a standard ACL to restrict communication from a defined source host. Validation included troubleshooting cabling, interface state, routing paths, and endpoint addressing before confirming enforcement.
           </p>
 
           <div class="tag-row">
@@ -638,60 +681,100 @@
 
             <div class="image-box">
               <h4>Interface Verification</h4>
-              <img src="acl-interfaces.png" alt="show ip interface brief output">
-              <p><i>Figure 7. Router interface verification confirming both routed networks were operational before ACL validation testing.</i></p>
+              <img src="acl-interfaces.png" alt="ACL interface verification">
+              <p><i>Figure 7. Router interface verification confirming that both routed networks were operational before ACL validation testing.</i></p>
             </div>
 
             <div class="image-box">
               <h4>Blocked Traffic Evidence</h4>
-              <img src="acl-ping.png" alt="Blocked ping output">
-              <p><i>Figure 8. Failed ICMP communication from a restricted host confirming that traffic was not successfully forwarded to the protected network.</i></p>
-<div class="lab-card">
-  <div class="lab-head">
-    <h3>Investigation 04: Firewall Traffic Filtering & Access Control</h3>
-    <span class="badge badge-success">Threat Contained</span>
-  </div>
-
-  <p>
-    Designed and implemented a segmented network environment to simulate firewall behavior using extended Access Control Lists (ACLs).
-    Configured traffic filtering rules to block HTTP access to a protected server while maintaining ICMP connectivity. 
-    Conducted validation testing to confirm enforcement of security controls and proper network functionality.
-  </p>
-
-  <div class="tag-row">
-    <span class="tag">Firewall Configuration</span>
-    <span class="tag">Extended ACL</span>
-    <span class="tag">Traffic Filtering</span>
-    <span class="tag">Network Segmentation</span>
-  </div>
-
-  <div class="lab-images">
-
-    <div class="image-box">
-      <h4>Network Topology</h4>
-      <img src="fw-topology.png">
-      <p><i>Segmented network with controlled access between client and server zones.</i></p>
-    </div>
-
-    <div class="image-box">
-      <h4>ACL Configuration</h4>
-      <img src="fw-acl-config.png">
-      <p><i>Extended ACL applied to restrict HTTP traffic while allowing all other protocols.</i></p>
-    </div>
-
-    <div class="image-box">
-      <h4>Blocked Web Traffic</h4>
-      <img src="fw-http-blocked.png">
-      <p><i>HTTP request failure demonstrates enforced security control.</i></p>
-    </div>
-
-    </div>
-
-  </div>
-</div>
+              <img src="acl-ping.png" alt="Blocked ACL traffic">
+              <p><i>Figure 8. Failed ICMP communication from a restricted host confirming that traffic was not successfully forwarded to the protected network due to ACL enforcement.</i></p>
             </div>
           </div>
         </article>
+
+        <article class="lab-card">
+          <div class="lab-head">
+            <h3>Investigation 04: Firewall Traffic Filtering & Access Control</h3>
+            <span class="badge badge-success">Validated</span>
+          </div>
+
+          <p>
+            Designed and implemented a segmented network environment to simulate firewall behavior using extended ACLs. Configured filtering rules to block HTTP access to a protected server while maintaining ICMP connectivity, then validated enforcement through browser and ping testing.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Firewall Simulation</span>
+            <span class="tag">Extended ACL</span>
+            <span class="tag">Port Filtering</span>
+            <span class="tag">Network Segmentation</span>
+          </div>
+
+          <div class="lab-images">
+            <div class="image-box">
+              <h4>Network Topology</h4>
+              <img src="fw-topology.png" alt="Firewall topology">
+              <p><i>Figure 9. Segmented network topology demonstrating a client network and protected server environment connected through a Cisco router configured with extended ACLs.</i></p>
+            </div>
+
+            <div class="image-box">
+              <h4>Extended ACL Configuration</h4>
+              <img src="fw-acl-config.png" alt="Firewall ACL config">
+              <p><i>Figure 10. Extended ACL configuration applied on the router to block HTTP traffic on port 80 from the source network while permitting all other traffic.</i></p>
+            </div>
+
+            <div class="image-box">
+              <h4>ICMP Connectivity (Allowed)</h4>
+              <img src="fw-ping.png" alt="Firewall ping allowed">
+              <p><i>Figure 11. Successful ICMP communication confirming that network connectivity remained functional despite HTTP traffic restrictions.</i></p>
+            </div>
+
+            <div class="image-box">
+              <h4>HTTP Traffic Blocked</h4>
+              <img src="fw-http-blocked.png" alt="HTTP blocked">
+              <p><i>Figure 12. Web browser request timing out due to ACL rules blocking HTTP traffic, confirming successful firewall-like behavior.</i></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="lab-card">
+          <div class="lab-head">
+            <h3>Investigation 05: Intrusion Detection & Traffic Analysis</h3>
+            <span class="badge badge-warning">Suspicious Activity Detected</span>
+          </div>
+
+          <p>
+            Conducted packet-level traffic analysis using simulation mode to observe both normal and suspicious behavior in a segmented network environment. Established normal HTTP communication as a baseline, then identified repeated ICMP requests from a single source host as potential reconnaissance activity.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Intrusion Detection</span>
+            <span class="tag">Traffic Analysis</span>
+            <span class="tag">Packet Inspection</span>
+            <span class="tag">SOC Investigation</span>
+          </div>
+
+          <div class="lab-images">
+            <div class="image-box">
+              <h4>Normal Traffic</h4>
+              <img src="ids-normal-traffic.png" alt="Normal traffic">
+              <p><i>Figure 13. Legitimate HTTP communication between client and server used to establish baseline behavior.</i></p>
+            </div>
+
+            <div class="image-box">
+              <h4>Suspicious Activity</h4>
+              <img src="ids-suspicious-traffic.png" alt="Suspicious ICMP activity">
+              <p><i>Figure 14. Repeated ICMP requests from a single source host indicating potential reconnaissance activity.</i></p>
+            </div>
+
+            <div class="image-box">
+              <h4>Packet Flow Analysis</h4>
+              <img src="ids-packet-flow.png" alt="Packet flow analysis">
+              <p><i>Figure 15. Simulation mode event list displaying both HTTP and ICMP traffic, enabling comparison of normal user behavior and suspicious repeated requests.</i></p>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -703,8 +786,7 @@
           <h2 class="section-title">Contact</h2>
         </div>
         <p>
-          I am actively growing my portfolio for SOC analyst, cybersecurity analyst, and technical security support opportunities.
-          For networking, security, or entry-level analyst roles, you can review my resume or contact me directly below.
+          I am actively growing this portfolio for SOC analyst, cybersecurity analyst, and technical security support opportunities. You can review my resume or contact me directly below.
         </p>
 
         <div class="contact-links">
@@ -719,8 +801,4 @@
     © 2026 Dejae Dailey • SOC Analyst Portfolio
   </footer>
 </body>
-</html>
-
-</body>
-</html>
 </html>
